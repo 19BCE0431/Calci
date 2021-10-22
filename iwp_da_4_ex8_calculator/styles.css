@@ -1,0 +1,72 @@
+body {
+  /*The CSS property 'line-height' actually accepts a pure numerical value, which will work out the line height based on the font size set. If you want to use the golden ratio (1.61803399), then you could set this as the line height in the body.
+ */
+  font: 100%/1.618 sans-serif;
+  text-align: center;
+  background-color: #393E46;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #EEEEEE;
+  font-size: 3rem;
+}
+
+/* Body of the calculator */
+#calculator {
+  width: 170px;
+  background-color: #00ADB5;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+/* Result pannel/screen props */
+#result {
+  width: 160px;
+  height: 54px;
+  background-color: #cddecc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  /* Numbers display from right in most of the calculators */
+  text-align: right;
+  line-height: 54px;
+  font-family: digital;
+  padding: 0px 5px 0px 5px;
+  font-size: 36px;
+  /* overflow: hidden otherwise the numbers would come out of the box*/
+  overflow: hidden;
+}
+
+/* key properties */
+.key {
+  width: 35px;
+  background-color: #EEEEEE;
+  display: inline-block;
+  margin: 3px 0px 8px 3px;
+  vertical-align: bottom;
+  text-align: center;
+  padding: 5px 0px 5px 0px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #393E46, 0 2px 5px rgba(0, 0, 0, .75);
+}
+
+/* Sicne this is the key that produces result, so it's been given with more width that other keys. */
+.equal-key {
+  width: 120px;
+  border-radius: 5px;
+}
+
+.clear-key {
+  background-color: #DD2C00;
+  color: #EEEEEE;
+}
+
+/* On button pressed, it should move downwards just to bring an action or appeal to the user */
+.key:active {
+  background-color: #393E46;
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
+}
